@@ -1,0 +1,51 @@
+.items {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    right: 50px;
+    margin-top: 25vh;
+}
+
+a {
+    height: 40px;
+    text-decoration: none;
+    width: 40px;
+    border-radius: 50%;
+    background: white;
+    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    font-size: 20px;
+}
+
+a:hover {
+  background: #c3c3c3;
+}
+
+
+.wrapper {
+  position: relative;
+  margin: 10px; 
+}
+
+.hover-content {
+  position: absolute;
+  color: white;
+  top: 10px;
+  right: 60px;
+  font-size: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.item:hover .hover-content {
+  opacity: 1;
+  visibility: visible;
+}
