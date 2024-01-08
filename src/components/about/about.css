@@ -1,13 +1,365 @@
+@font-face {
+    font-family: 'Spac3Neon';
+    src: url("/public/fonts/Spac3Neon.ttf");
+}
+
 .about {
     height: 100vh;
     width: 100vw;
-    background-color: green;
+    background-color: #070312;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: -1;
+    border: 1px solid green;
+    position: relative;
 }
 
-.h1 {
+nav {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background-color: #070312;
+    z-index: 10;
+}
+
+nav button {
+    color: white;
+    background: none;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 15px;
+}
+
+.link button:hover {
+    padding-bottom: 0;
+    border-bottom: 2px solid green;
+    transition: .5s ease-in-out;
+}
+
+.active {
+    padding-bottom: 0;
+    border-bottom: 2px solid green;
+    transition: .5s ease-in-out;
+}
+
+.logo {
+    color: green;
+    font-family: 'Spac3Neon';
+    font-size: 26px;
+    letter-spacing: 4px;
+    padding-left: 10px;
+}
+
+.about-container {
+    height: calc(100% - 50px);
+    margin: 0 120px 0 50px;
+}
+
+.heading {
+    color: green;
+    font-size: 65px;
+    margin-top: 30px;
+    margin-left: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.about-container p {
+    margin-top: 10px;
+    font-size: 25px;
+    text-align: left;
+    margin-left: 20px;
+    line-height: 35px;
+}
+
+.skill-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-left: 50px;
+}
+
+.skill-icon {
+    text-decoration: none;
+    color: white;
+    font-size: 100px;
+    position: relative;
+}
+
+.js:hover {
+    color: yellow;
+}
+
+.html:hover {
+    color: #e34c26;
+}
+
+.css:hover {
+    color: #264de4;
+}
+
+.react:hover {
+    color: #04d8f9;
+}
+
+.node:hover {
+    color: #3c873a;
+}
+
+.mongo:hover {
+    color: #00684a;
+}
+
+.express:hover {
+    color: gray;
+}
+
+.sass:hover {
+    color: #cd6799;
+}
+
+.skill-desc {
+    position: absolute;
+    top: -30px;
+    font-size: 20px;
+    color: white;
+    display: none;
+}
+
+#js, #mongo, #express {
+    left: 10px;
+}
+
+#html, #node, #sass {
+    left: 20px;
+}
+
+#css {
+    left: 30px;
+}
+
+#react {
+    left: 25px;
+}
+
+.skill-icon:hover .skill-desc {
+    display: block;
+}
+
+.about .made {
+    position: absolute;
+    font-size: 10px;
+    right: 130px;
+    bottom: 0;
+
+}
+
+.details-bar {
+    width: 400px;
+    height: calc(100% - 50px);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.social {
+    width: 90%;
+    background-color: #110929;
+    border-radius: 10px;
+    padding: 20px 10px 20px 10px;
+    margin: 10px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social a {
+    width: 90%;
+    height: 50px;
+    background: none;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.social a:hover {
+    background: white;
     color: black;
 }
+
+.details {
+    width: 90%;
+    background-color: #110929;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 80px;
+    padding: 20px;
+}
+
+.details h3 {
+    font-size: 500px;
+    font-size: 20px;
+    color: white;
+}
+
+.details a {
+    text-decoration: none;
+    font-family: monospace;
+    color: white;
+    line-height: 10px;
+}
+
+.experience-section {
+    width: calc(100% - 400px);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-left: 20px;
+    padding-bottom: 30px;
+    overflow-y: scroll;
+    z-index: 5;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.experience-section h1 {
+    color: white;
+    font-size: 65px;
+    margin-top: 75px;
+}
+
+.experience-section h2 {
+    color: #00c000;
+    font-size: 37px;
+}
+
+.experience-section h4 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.work-desc {
+    color: white;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 640px) {
+
+    .about {
+        background: #070312;
+        overflow-y: scroll;
+    }
+
+    .about-container {
+        margin-left: 10px;
+        width: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        margin-right: 20px;
+    }
+
+    nav {
+        width: 80%;
+    }
+
+    .logo {
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    nav button {
+        font-size: 13px;
+        margin: 5px;
+    }
+
+    .heading {
+        font-size: 30px;
+        margin-top: 30px;
+        margin-right: 10px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .about-container p {
+        font-size: 15px;
+        text-align: left;
+        margin-right: 0;
+    }
+
+    .skill-container {
+        margin: 10px;
+    }
+
+    .skill-icon {
+        font-size: 80px;
+    }
+
+    .experience-container {
+        margin-top: 700px;
+        background-color: #070312;
+        display: flex;
+        height: fit-content;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow-y: scroll;
+        overflow-x: auto;
+    }
+
+    .experience-section {
+      width: 100%;
+      position: static;
+      padding-bottom: 0;
+    }
+    
+    .details-bar {
+      width: 100%;
+      position: static;
+      margin-left: 15px;
+    }
+    
+    .details {
+      margin-top: 0;
+    }
+    
+    .experience-section h1 {
+      font-size: 40px;
+      margin-top: 30px;
+    }
+    
+    .experience-section h2 {
+      font-size: 28px;
+    }
+    
+    .experience-section h4 {
+      font-size: 16px;
+    }
+    
+    .work-desc {
+      font-size: 16px;
+      margin-right: 5px;
+    }
+}
+

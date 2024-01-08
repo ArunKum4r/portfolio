@@ -5,17 +5,30 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    right: 50px;
-    margin-top: 25vh;
+    right: 30px;
+    height: 100vh;
+    z-index: 15;
 }
 
-a {
+.menu {
+  width: 30px;
+  max-width: max-content;
+  background-color: transparent;
+  color: green;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 15;
+  display: none;
+}
+
+.item {
     height: 40px;
     text-decoration: none;
     width: 40px;
     border-radius: 50%;
     background: white;
-    color: green;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,10 +37,13 @@ a {
     font-size: 20px;
 }
 
-a:hover {
-  background: #c3c3c3;
+.item:hover {
+  color: green;
 }
 
+.active {
+  color: green;
+}
 
 .wrapper {
   position: relative;
@@ -48,4 +64,14 @@ a:hover {
 .item:hover .hover-content {
   opacity: 1;
   visibility: visible;
+}
+
+@media screen and (max-width: 640px) {
+  .items {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
 }
