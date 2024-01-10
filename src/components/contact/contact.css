@@ -1,8 +1,14 @@
+@import url(/src/App.css);
+
 .contacts-container {
     width: 100vw;
     height: 100vh;
-    background: #070312;
-    color: white;
+    background: var(--bg);
+    color: var(--primary-text);
+}
+
+.contacts-title {
+    color: var(--primary-text);
 }
 
 .contacts {
@@ -25,7 +31,7 @@
 .separator {
     width: 2px;
     height: 150px;
-    background-color: white;
+    background-color: var(--secondary-text);
 }
 
 .contacts-container h1 {
@@ -37,7 +43,7 @@
 }
 
 .contact-form {
-    background: #110929;
+    background: var(--card-bg);
     height: max-content;
     border-radius: 10px;
     margin: 25px 20px 0 20px;
@@ -60,12 +66,24 @@ form input {
     border: 1px solid white;
 }
 
+form input::placeholder {
+    color: white;
+}
+
 form textarea {
     width: 400px;
     padding: 10px;
     color: white;
     background: transparent;
     border: 1px solid white;
+}
+
+form textarea::placeholder {
+    color: white;
+}
+
+form label {
+    color: white;
 }
 
 form .btn {
@@ -84,7 +102,7 @@ input:focus, textarea:focus {
 
 form  .btn:hover {
     background-color: white;
-    color: black;
+    color: var(--card-bg);
 } 
 
 .contact-intro {

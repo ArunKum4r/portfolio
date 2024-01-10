@@ -1,3 +1,4 @@
+@import url(/src/App.css);
 
 @font-face {
     font-family: 'Spac3Neon';
@@ -5,7 +6,7 @@
 }
   
 .home {
-    background-color: #070312;
+    background-color: var(--bg);
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -15,7 +16,7 @@
 }
 
 p {
-    color: white;
+    color: var(--primary-text);
     font-family: monospace;
 }
 
@@ -39,7 +40,7 @@ p {
 }
   
 .name h1 {
-    color: green;
+    color: var(--secondary-text);
     text-align: center;
     font-size: 60px;
     font-family: 'Spac3Neon';
@@ -49,11 +50,11 @@ p {
 }
   
 .name h1:hover {
-    text-shadow: 10px 10px 80px rgb(0, 255, 0);
+    text-shadow: 10px 10px 80px var(--secondary-text);
 }
   
 .greet {
-    color: white;
+    color: var(--primary-text);
     margin-bottom: 10px;
     margin-left: -20px;
     font-size: 18px;
@@ -75,7 +76,7 @@ p {
     font-size: 18px;
     margin-top: 10px;
     margin-right: 5px;
-    border-right: 2px solid white;
+    border-right: 2px solid var(--primary-text);
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -95,7 +96,7 @@ p {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: white;
+    background-color: var(--secondary-card-text);
     position: fixed;
     pointer-events: none;
     mix-blend-mode: difference;

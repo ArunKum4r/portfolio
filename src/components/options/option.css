@@ -1,3 +1,5 @@
+@import url(/src/App.css);
+
 .items {
     position: fixed;
     display: flex;
@@ -10,11 +12,20 @@
     z-index: 15;
 }
 
+.toggle {
+  position: fixed;
+  width: max-content;
+  background: transparent;
+  top: 20px;
+  right: 100px;
+  z-index: 15;
+}
+
 .menu {
   width: 30px;
   max-width: max-content;
   background-color: transparent;
-  color: green;
+  color: var(--secondary-text);
   position: fixed;
   top: 20px;
   right: 20px;
@@ -38,11 +49,11 @@
 }
 
 .item:hover {
-  color: green;
+  color: var(--secondary-text);
 }
 
 .active {
-  color: green;
+  color: var(--secondary-text);
 }
 
 .wrapper {
@@ -52,7 +63,7 @@
 
 .hover-content {
   position: absolute;
-  color: white;
+  color: var(--primary-text);
   top: 10px;
   right: 60px;
   font-size: 20px;
@@ -73,5 +84,10 @@
 
   .menu {
     display: block;
+  }
+
+  .toggle {
+    right: 50px;
+    top: 18px;
   }
 }

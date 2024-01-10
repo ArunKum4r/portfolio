@@ -1,3 +1,5 @@
+@import url(/src/App.css);
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -20,12 +22,12 @@
     align-items: center;
     justify-content: flex-start;
     gap: 40px;
-    color: black;
+    color: var(--card-bg);
 }
 
 .sidebar-item a {
     text-decoration: none;
-    color: green;
+    color: var(--secondary-text);
 }
 
 .link-icons {

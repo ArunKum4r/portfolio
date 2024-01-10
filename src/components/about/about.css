@@ -1,3 +1,5 @@
+@import url(/src/App.css);
+
 @font-face {
     font-family: 'Spac3Neon';
     src: url("/public/fonts/Spac3Neon.ttf");
@@ -6,7 +8,7 @@
 .about {
     height: 100vh;
     width: 100vw;
-    background-color: #070312;
+    background-color: var(--bg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,12 +24,12 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between; 
-    background-color: #070312;
+    background-color: var(--bg);
     z-index: 10;
 }
 
 nav button {
-    color: white;
+    color: var(--primary-text);
     background: none;
     border: none;
     outline: none;
@@ -38,18 +40,18 @@ nav button {
 
 .link button:hover {
     padding-bottom: 0;
-    border-bottom: 2px solid green;
+    border-bottom: 2px solid var(--secondary-text);
     transition: .5s ease-in-out;
 }
 
 .active {
     padding-bottom: 0;
-    border-bottom: 2px solid green;
+    border-bottom: 2px solid var(--secondary-text);
     transition: .5s ease-in-out;
 }
 
 .logo {
-    color: green;
+    color: var(--secondary-text);
     font-family: 'Spac3Neon';
     font-size: 26px;
     letter-spacing: 4px;
@@ -63,7 +65,7 @@ nav button {
 }
 
 .heading {
-    color: green;
+    color: var(--primary-text);
     font-size: 65px;
     margin-top: 30px;
     margin-left: 40px;
@@ -90,7 +92,7 @@ nav button {
 }
 
 .skill-icon {
-    color: white;
+    color: #adacac;
     font-size: 100px;
     position: relative;
 }
@@ -131,7 +133,7 @@ nav button {
     position: absolute;
     top: -30px;
     font-size: 20px;
-    color: white;
+    color: var(--primary-text);
     display: none;
 }
 
@@ -185,30 +187,30 @@ nav button {
 }
 
 .experience-section h1 {
-    color: white;
+    color: var(--primary-text);
     font-size: 65px;
-    margin-top: 75px;
+    margin-top: 50px;
 }
 
 .experience-section h2 {
-    color: #00c000;
+    color: var(--secondary-text);
     font-size: 37px;
 }
 
 .experience-section h4 {
-    color: white;
+    color: var(--primary-text);
     font-size: 18px;
     margin-bottom: 5px;
 }
 
 .work-desc {
-    color: white;
+    color: var(--primary-text);
     margin-left: 20px;
     font-size: 20px;
 }
 
 .work-desc a {
-    color: white;
+    color: var(--primary-text);
     text-decoration: none;
     margin-left: 20px;
     font-size: 20px;
@@ -250,7 +252,7 @@ nav button {
 
     .experience-container {
         margin-top: 60px;
-        background-color: #070312;
+        background-color: var(--bg);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -302,7 +304,7 @@ nav button {
 @media screen and (max-width: 640px) {
 
     .about {
-        background: #070312;
+        background: var(--bg);
         height: max-content;
         flex-direction: column;
         gap: 20px;
@@ -357,7 +359,7 @@ nav button {
 
     .experience-container {
         margin-top: 60px;
-        background-color: #070312;
+        background-color: var(--bg);
         display: flex;
         flex-direction: column;
         align-items: center;

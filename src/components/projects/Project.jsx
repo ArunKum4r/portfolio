@@ -72,7 +72,7 @@ const Project = () => {
                         <a href="https://github.com/ArunKum4r/node-weather" target='_blank'><FaGithubSquare /></a>
                         <a href="https://arun-weather-app.onrender.com/" target='_blank'><PiLinkSimpleBold /></a>
                     </div>
-                </div>motion.
+                </div>
             </motion.div>
             <motion.div class="tile tile3" variants={itemVariants}>
                 <img src={rto} alt="rto" />
@@ -110,7 +110,7 @@ const Project = () => {
                 <p>Dive into my story! Learn about my background, journey into the world of tech, and the skills I've cultivated along the way.</p>
                 <p>Embark on a journey through my professional endeavors. From leadership roles to impactful internships, every experience has shaped my skills and approach.</p>
                 <div className="tech">
-                    <h6>React - CSS</h6>
+                    <h6 className='tech-stack'>React - CSS</h6>
                     <div className="takeme">
                         <a href="https://github.com/ArunKum4r/portfolio" target='_blank'><FaGithubSquare /></a>
                         <a href="/" target='_blank'><PiLinkSimpleBold /></a>

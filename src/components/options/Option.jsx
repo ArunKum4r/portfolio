@@ -6,6 +6,7 @@ import { RiContactsBook2Fill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Sidebar from '../sidebar/Sidebar'
 import './option.css'
+import ThemeToggle from '../themeToggle/ThemeToggle';
 
 const Option = () => {
   const [open, setOpen] = useState(false)
@@ -47,6 +48,7 @@ const Option = () => {
 
   return (
     <div className='option'>
+      <div className="toggle"><ThemeToggle/></div>
       <div className='menu' onClick={handleMenu}><GiHamburgerMenu /></div>
       {open && <Sidebar />}
       <motion.div className="items" variants={variants} initial='closed' animate='open'>

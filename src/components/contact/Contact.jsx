@@ -21,7 +21,7 @@ const Contact = () => {
   }; 
   return (
     <div className='contacts-container'>
-        <h1>Contact Me</h1>
+        <h1 className='contacts-title'>Contact Me</h1>
         <p className='contact-intro'>Let's connect! Whether you're interested in collaboration, have a question, or just want to say hello, I'm just a message away. Reach out, and let's start a conversation.</p>
         <div className="contacts">
             <div className="details-container-contact"><Details /></div>

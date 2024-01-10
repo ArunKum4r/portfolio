@@ -1,3 +1,5 @@
+@import url(/src/App.css);
+
 .details-bar {
     width: 100%;
     height: 100%;
@@ -5,7 +7,7 @@
 
 .social {
     width: 90%;
-    background-color: #110929;
+    background-color: var(--card-bg);
     border-radius: 10px;
     padding: 20px 10px 20px 10px;
     margin: 15px;
@@ -15,6 +17,10 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+}
+
+.details p {
+    color: white;
 }
 
 .social a {
@@ -34,12 +40,12 @@
 
 .social a:hover {
     background: white;
-    color: black;
+    color: var(--card-bg);
 }
 
 .details {
     width: 90%;
-    background-color: #110929;
+    background-color: var(--card-bg);
     border-radius: 10px;
     margin: 15px;
     margin-top: 80px;
