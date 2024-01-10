@@ -53,25 +53,25 @@ const Option = () => {
       {open && <Sidebar />}
       <motion.div className="items" variants={variants} initial='closed' animate='open'>
         <div className="wrapper">
-          <motion.a href='/#home' className={`item ${active === 'home' ? 'active' : ''}`} variants={itemVariants} onClick={() => handleActive('home')}>
+          <motion.a href='/portfolio/#home' className={`item ${active === 'home' ? 'active' : ''}`} variants={itemVariants} onClick={() => handleActive('home')}>
             <div className="hover-content">Home</div>
             <FaHome />
           </motion.a>
         </div>
         <div className="wrapper">
-          <motion.a href='/#about' className={`item ${active === 'about' ? 'active' : ''}`} variants={itemVariants} onClick={() => handleActive('about')}>
+          <motion.a href='/portfolio/#about' className={`item ${active === 'about' ? 'active' : ''}`} variants={itemVariants} onClick={() => handleActive('about')}>
             <div className="hover-content">About</div>
             <SiAboutdotme />
           </motion.a>
         </div>
         <div className="wrapper">
-          <motion.a href='/#projects' className={`item ${active === 'projects' ? 'active' : ''}`} variants={itemVariants} onClick={() => handleActive('projects')}>
+          <motion.a href='/portfolio/#projects' className={`item ${active === 'projects' ? 'active' : ''}`} variants={itemVariants} onClick={() => handleActive('projects')}>
             <div className="hover-content">Projects</div>
             <FaFolderOpen />
           </motion.a>
         </div>
         <div className="wrapper">
-          <motion.a href='/#contact' className={`item ${active === 'contact' ? 'active' : ''}`} variants={itemVariants} onClick={() => handleActive('contact')}>
+          <motion.a href='/portfolio/#contact' className={`item ${active === 'contact' ? 'active' : ''}`} variants={itemVariants} onClick={() => handleActive('contact')}>
             <div className="hover-content">Contact</div>
             <RiContactsBook2Fill />
           </motion.a>

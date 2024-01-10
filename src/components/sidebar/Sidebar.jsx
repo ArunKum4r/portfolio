@@ -35,19 +35,19 @@ const Sidebar = () => {
     <motion.div className='sidebar' variants={variants} initial='closed' animate='open'>
         <motion.div className="sidebar-item" variants={itemVariants}>
             <FaHome className='link-icons' />
-            <a className='links' href="/#home">Home</a>
+            <a className='links' href="/portfolio/#home">Home</a>
         </motion.div>
         <motion.div className="sidebar-item" variants={itemVariants}>
             <SiAboutdotme className='link-icons' />
-            <a className='links' href="/#about">About</a>
+            <a className='links' href="/portfolio/#about">About</a>
         </motion.div>
         <motion.div className="sidebar-item" variants={itemVariants}>
             <FaFolderOpen className='link-icons' />
-            <a className='links' href="/#projects">Projects</a>
+            <a className='links' href="/portfolio/#projects">Projects</a>
         </motion.div>
         <motion.div className="sidebar-item" variants={itemVariants}>
             <RiContactsBook2Fill className='link-icons' />
-            <a className='links' href="/#contact">Contact</a>
+            <a className='links' href="/portfolio/#contact">Contact</a>
         </motion.div>
         <motion.div className="sidebar-item" variants={itemVariants}>
             <FaDownload className='link-icons' />
