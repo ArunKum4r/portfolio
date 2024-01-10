@@ -10,7 +10,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid green;
     position: relative;
 }
 
@@ -60,6 +59,7 @@ nav button {
 .about-container {
     height: calc(100% - 50px);
     margin: 0 120px 0 50px;
+    overflow: hidden;
 }
 
 .heading {
@@ -90,7 +90,6 @@ nav button {
 }
 
 .skill-icon {
-    text-decoration: none;
     color: white;
     font-size: 100px;
     position: relative;
@@ -164,68 +163,11 @@ nav button {
 
 }
 
-.details-bar {
+.details-container {
     width: 400px;
-    height: calc(100% - 50px);
     position: absolute;
     top: 0;
     left: 0;
-}
-
-.social {
-    width: 90%;
-    background-color: #110929;
-    border-radius: 10px;
-    padding: 20px 10px 20px 10px;
-    margin: 10px;
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.social a {
-    width: 90%;
-    height: 50px;
-    background: none;
-    color: white;
-    border: 1px solid white;
-    border-radius: 10px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-size: 20px;
-}
-
-.social a:hover {
-    background: white;
-    color: black;
-}
-
-.details {
-    width: 90%;
-    background-color: #110929;
-    border-radius: 10px;
-    margin: 10px;
-    margin-top: 80px;
-    padding: 20px;
-}
-
-.details h3 {
-    font-size: 500px;
-    font-size: 20px;
-    color: white;
-}
-
-.details a {
-    text-decoration: none;
-    font-family: monospace;
-    color: white;
-    line-height: 10px;
 }
 
 .experience-section {
@@ -236,7 +178,7 @@ nav button {
     right: 0;
     margin-left: 20px;
     padding-bottom: 30px;
-    overflow-y: scroll;
+    overflow-y: auto;
     z-index: 5;
     margin-top: 0;
     margin-bottom: 50px;
@@ -265,19 +207,114 @@ nav button {
     font-size: 20px;
 }
 
+.work-desc a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 780px) {
+    .about {
+        height: max-content;
+    }
+    .about-container {
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .heading {
+        font-size: 30px;
+        margin-top: 60px;
+        margin-right: 10px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .about-container p {
+        font-size: 15px;
+        text-align: left;
+        margin-right: 100px;
+    }
+
+    .skill-container {
+        padding-right: 100px;
+    }
+
+    .skill-icon {
+        font-size: 80px;
+    }
+
+    .experience-container {
+        margin-top: 60px;
+        background-color: #070312;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .experience-section {
+      width: 100%;
+      position: static;
+      padding-bottom: 0;
+      overflow: hidden;
+      
+      padding:10px 120px 10px 10px;
+    }
+    
+    .experience-section h1 {
+      font-size: 40px;
+      margin-top: 30px;
+    }
+    
+    .experience-section h2 {
+      font-size: 28px;
+    }
+    
+    .experience-section h4 {
+      font-size: 16px;
+    }
+    
+    .work-desc {
+      font-size: 18px;
+      margin-right: 5px;
+    }
+
+    .work-desc a {
+        font-size: 18px;
+        text-align: left;
+    }
+
+    .details-container {
+        width: 100%;
+        position: static;
+        margin-bottom: 20px;
+        padding:10px 120px 10px 10px;
+    }
+}
+
+
 @media screen and (max-width: 640px) {
 
     .about {
         background: #070312;
+        height: max-content;
+        flex-direction: column;
+        gap: 20px;
         overflow-y: scroll;
     }
 
     .about-container {
-        margin-left: 10px;
-        width: 100%;
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
         overflow-y: scroll;
         overflow-x: hidden;
-        margin-right: 20px;
     }
 
     nav {
@@ -296,10 +333,10 @@ nav button {
 
     .heading {
         font-size: 30px;
-        margin-top: 30px;
+        margin-top: 60px;
         margin-right: 10px;
         text-align: center;
-        margin-bottom: 0;
+        margin-bottom: 30px;
     }
 
     .about-container p {
@@ -309,7 +346,9 @@ nav button {
     }
 
     .skill-container {
-        margin: 10px;
+        margin: 0;
+        gap: 15px;
+        padding: 10px 0 0 0;
     }
 
     .skill-icon {
@@ -317,31 +356,22 @@ nav button {
     }
 
     .experience-container {
-        margin-top: 700px;
+        margin-top: 60px;
         background-color: #070312;
         display: flex;
-        height: fit-content;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        overflow-y: scroll;
-        overflow-x: auto;
+        padding: 10px;
     }
 
     .experience-section {
       width: 100%;
       position: static;
       padding-bottom: 0;
-    }
-    
-    .details-bar {
-      width: 100%;
-      position: static;
-      margin-left: 15px;
-    }
-    
-    .details {
-      margin-top: 0;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
     }
     
     .experience-section h1 {
@@ -358,8 +388,43 @@ nav button {
     }
     
     .work-desc {
-      font-size: 16px;
+      font-size: 18px;
       margin-right: 5px;
     }
+
+    .work-desc a {
+        font-size: 18px;
+        text-align: left;
+    }
+
+    .details-container {
+        width: 100%;
+        position: static;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .skill-desc {
+        top: -10px;
+        font-size: 10px;
+    }
+
+    #js, #mongo, #express {
+        left: 20px;
+    }
+    
+    #html, #node, #sass {
+        left: 25px;
+    }
+    
+    #css {
+        left: 30px;
+    }
+    
+    #react {
+        left: 25px;
+    }
+
 }
 

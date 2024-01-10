@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {motion} from 'framer-motion'
 import { SiAboutdotme } from "react-icons/si";
 import { FaFolderOpen, FaDownload, FaHome } from "react-icons/fa";
 import { RiContactsBook2Fill } from "react-icons/ri";
@@ -9,6 +10,32 @@ import './option.css'
 const Option = () => {
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState('home')
+
+  const variants = {
+    open: {
+      transition: {
+        staggerChildren: 0.1,
+        delay: 1
+      }
+    },
+    closed: {
+      transition: {
+        staggerChildren: 0.05,
+        staggerDirection: -1
+      }
+    }
+  }
+  
+  const itemVariants = {
+    open: {
+      y: 0,
+      opacity: 1
+    },
+    closed: {
+      y: 50,
+      opacity: 0
+    }
+  }
 
   const handleMenu = () => {
     setOpen(!open)
@@ -22,38 +49,38 @@ const Option = () => {
     <div className='option'>
       <div className='menu' onClick={handleMenu}><GiHamburgerMenu /></div>
       {open && <Sidebar />}
-      <div className="items">
+      <motion.div className="items" variants={variants} initial='closed' animate='open'>
         <div className="wrapper">
-          <a href='/#home' className={`item ${active === 'home' ? 'active' : ''}`} onClick={() => handleActive('home')}>
+          <motion.a href='/#home' className={`item ${active === 'home' ? 'active' : ''}`} variants={itemVariants} onClick={() => handleActive('home')}>
             <div className="hover-content">Home</div>
             <FaHome />
-          </a>
+          </motion.a>
         </div>
         <div className="wrapper">
-          <a href='/#about' className={`item ${active === 'about' ? 'active' : ''}`} onClick={() => handleActive('about')}>
+          <motion.a href='/#about' className={`item ${active === 'about' ? 'active' : ''}`} variants={itemVariants} onClick={() => handleActive('about')}>
             <div className="hover-content">About</div>
             <SiAboutdotme />
-          </a>
+          </motion.a>
         </div>
         <div className="wrapper">
-          <a href='/#projects' className={`item ${active === 'projects' ? 'active' : ''}`} onClick={() => handleActive('projects')}>
+          <motion.a href='/#projects' className={`item ${active === 'projects' ? 'active' : ''}`} variants={itemVariants} onClick={() => handleActive('projects')}>
             <div className="hover-content">Projects</div>
             <FaFolderOpen />
-          </a>
+          </motion.a>
         </div>
         <div className="wrapper">
-          <a href='/#contact' className={`item ${active === 'contact' ? 'active' : ''}`} onClick={() => handleActive('contact')}>
+          <motion.a href='/#contact' className={`item ${active === 'contact' ? 'active' : ''}`} variants={itemVariants} onClick={() => handleActive('contact')}>
             <div className="hover-content">Contact</div>
             <RiContactsBook2Fill />
-          </a>
+          </motion.a>
         </div>
         <div className="wrapper">
-          <a href="https://drive.google.com/file/d/1A9bJj-2rv_KvjMh29hRDaPA2hqtKmPzP/view?usp=sharing" className="item">
+          <motion.a href="https://drive.google.com/file/d/1A9bJj-2rv_KvjMh29hRDaPA2hqtKmPzP/view?usp=sharing" variants={itemVariants} target='_blank' className="item">
             <div className="hover-content">Resume</div>
             <FaDownload />
-          </a>
+          </motion.a>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

@@ -1,7 +1,13 @@
 html {
+  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+section {
+  scroll-snap-align: center;
 }

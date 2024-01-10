@@ -1,0 +1,215 @@
+.projects {
+  width: 100vw;
+  height: max-content;
+  background-color: #070312;
+  color: white;
+  padding: 20px 180px 30px 60px;
+  overflow-y: scroll;
+}
+
+.projects h1 {
+  text-align: center;
+  padding: 10px;
+  font-size: 40px;
+}
+
+.projects-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px 10px;
+  grid-template-areas:
+    "tile1 tile1 tile1 tile2 tile2 tile2 tile2"
+    "tile1 tile1 tile1 tile2 tile2 tile2 tile2"
+    "tile1 tile1 tile1 tile2 tile2 tile2 tile2"
+    "tile1 tile1 tile1 tile4 tile4 tile5 tile5"
+    "tile3 tile3 tile3 tile4 tile4 tile5 tile5"
+    "tile3 tile3 tile3 tile4 tile4 tile5 tile5"
+    "tile3 tile3 tile3 tile4 tile4 tile5 tile5"
+    "tile3 tile3 tile3 tile4 tile4 tile5 tile5";
+  align-items: center;
+  justify-items: center;
+  overflow-x: hidden;
+}
+
+.tile2 {
+  grid-area: tile2;
+}
+
+.tile2 img {
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+  float: left;
+  margin-right: 10px;
+}
+
+.tile2 .tech {
+  width: 65%;
+  margin-left: 30%;
+}
+
+.tile1 {
+  grid-area: tile1;
+}
+
+.tile1 img,
+.tile3 img {
+  width: 30%;
+  height: 60%;
+  object-fit: cover;
+  float: left;
+  margin-right: 10px;
+}
+
+.tile3 {
+  grid-area: tile3;
+}
+
+.tile4 {
+  grid-area: tile4;
+}
+
+.tile4 img,
+.tile5 img {
+  width: 100%;
+  height: 30%;
+  object-fit: fill;
+}
+
+.tile5 {
+  grid-area: tile5;
+}
+
+.tile {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #110929;
+  position: relative;
+  padding: 20px;
+}
+
+.tech {
+  position: absolute;
+  width: 90%;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.tech .takeme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.takeme a {
+  text-decoration: none;
+  color: white;
+}
+
+.text-container {
+  overflow-y: scroll;
+}
+
+.tile h2 {
+  color: white;
+}
+
+.tile p {
+  margin-bottom: 5px;
+}
+
+.tile strong {
+  color: green;
+}
+
+@media screen and (max-width: 1080px) {
+  .projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+      "tile1 tile1 tile2 tile2"
+      "tile1 tile1 tile2 tile2"
+      "tile3 tile3 tile4 tile4"
+      "tile3 tile3 tile4 tile4"
+      ". tile5 tile5 ."
+      ". tile5 tile5 .";
+  }
+
+  .tile img {
+  width: 100%;
+  height: 30%;
+  object-fit: fill;
+  margin-bottom: 20px;
+  }
+
+  .tile2 .tech {
+    width: 90%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .projects {
+    height: max-content;
+    padding: 0;
+  }
+
+  .projects-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+  }
+
+  .tile {
+    width: 90%;
+    height: 220px;
+    padding: 10px;
+  }
+
+  .tile img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 5px;
+  }
+
+  .tile h2 {
+    color: white;
+  }
+
+  .tile p {
+    font-size: 8px;
+    margin-bottom: 5px;
+  }
+
+  .tile strong {
+    color: green;
+  }
+
+  .tile2 .tech {
+    width: 90%;
+    margin: 0;
+  }
+
+  .tech {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
