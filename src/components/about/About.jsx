@@ -55,7 +55,7 @@ const About = () => {
       {active === 'about' ? (<div className="about-container">
         <h1 className="heading">ABOUT ME</h1>
         <p>Hey, I am Arunkumar Subburaj, A self taught Full stack developer(MERN) 💻 based in Chennai, Tamilnadu, India.</p>
-        <p>Since, I was a kid, I have been fascinated by computers and enjoyed the process of creating things. 🛠️</p>
+        <p>Since my chilhood, I have been fascinated by computers and enjoyed the process of creating things. 🛠️</p>
         <p>As a result, I left my job as a line leader in ZF India, Chennai and started pursuing a career in software development.</p>
         <br />
         <p>Here are few thing I am good at,</p>

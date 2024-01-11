@@ -111,6 +111,17 @@ form  .btn:hover {
     padding: 20px 60px;
 }
 
+@media screen and (max-width: 1080px) {
+    .contacts-container {
+        height: max-content;
+        padding: 0 150px 10px 10px;
+    }
+
+    .contact-intro {
+        padding-bottom: 0;
+    }
+}
+
 @media screen and (max-width: 780px) {
     .contacts-container {
         height: max-content;

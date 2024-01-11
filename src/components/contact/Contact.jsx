@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import {motion} from 'framer-motion'
 import emailjs from '@emailjs/browser';
 import './contact.css'
 import Details from '../details/Details'
